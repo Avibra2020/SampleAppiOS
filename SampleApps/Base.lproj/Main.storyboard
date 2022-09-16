@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://dobs-preprod.avibra.com/?_partnerkey_=unest&amp;externalid=1234616532167&amp;utm_campaign=11000offer" borderStyle="roundedRect" placeholder="Enter URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S6W-6I-NBT">
+                                <rect key="frame" x="20" y="44" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBf-kr-vZh">
+                                <rect key="frame" x="20" y="100" width="174" height="31"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="WKWebView"/>
+                                <connections>
+                                    <action selector="onWebViewBtnPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="91p-f2-Fhz"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xl7-6k-1lY">
+                                <rect key="frame" x="0.0" y="148" width="414" height="714"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXi-wP-p1W">
+                                <rect key="frame" x="222" y="100" width="172" height="31"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="R4E-y8-bYg"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SafariView"/>
+                                <connections>
+                                    <action selector="onSafariViewBtnPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJ3-0y-QOp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S6W-6I-NBT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="AfV-dh-FvR"/>
+                            <constraint firstItem="fXi-wP-p1W" firstAttribute="leading" secondItem="qBf-kr-vZh" secondAttribute="trailing" constant="28" id="Gfo-yk-O5R"/>
+                            <constraint firstItem="fXi-wP-p1W" firstAttribute="baseline" secondItem="qBf-kr-vZh" secondAttribute="baseline" id="Gtr-i1-lEC"/>
+                            <constraint firstItem="S6W-6I-NBT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IvZ-Go-gQQ"/>
+                            <constraint firstItem="xl7-6k-1lY" firstAttribute="top" secondItem="qBf-kr-vZh" secondAttribute="bottom" constant="17" id="L9x-f1-HrW"/>
+                            <constraint firstItem="qBf-kr-vZh" firstAttribute="top" secondItem="S6W-6I-NBT" secondAttribute="bottom" constant="22" id="ZGX-zj-8l6"/>
+                            <constraint firstItem="xl7-6k-1lY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gI7-Xs-Dda"/>
+                            <constraint firstItem="xl7-6k-1lY" firstAttribute="centerX" secondItem="S6W-6I-NBT" secondAttribute="centerX" id="gXI-bn-VNl"/>
+                            <constraint firstItem="xl7-6k-1lY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rhm-2p-ACI"/>
+                            <constraint firstItem="fXi-wP-p1W" firstAttribute="trailing" secondItem="S6W-6I-NBT" secondAttribute="trailing" id="vRO-GU-YFW"/>
+                            <constraint firstItem="S6W-6I-NBT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="whA-rf-N9c"/>
+                            <constraint firstItem="S6W-6I-NBT" firstAttribute="centerX" secondItem="qBf-kr-vZh" secondAttribute="centerX" constant="100" id="wmD-yZ-GPX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtEnterUrl" destination="S6W-6I-NBT" id="cJy-Tv-xe2"/>
+                        <outlet property="wkWebView" destination="xl7-6k-1lY" id="w7t-hx-JOg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="70.982142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
